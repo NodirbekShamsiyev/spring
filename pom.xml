@@ -36,7 +36,7 @@
                     </arguments>
                 </configuration>
             </plugin>
-            <!-- <plugin> for production ready apps
+            <!-- <plugin> for production ready jar
                  <groupId>org.apache.maven.plugins</groupId>
                  <artifactId>maven-assembly-plugin</artifactId>
                  <executions>

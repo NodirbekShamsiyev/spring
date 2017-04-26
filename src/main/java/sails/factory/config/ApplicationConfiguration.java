@@ -12,11 +12,20 @@ import sails.components.service.MessageService;
 @ComponentScan("sails.components")
 public class ApplicationConfiguration {
 
-    @Bean
+    @Bean(name = "componentOne")
     MessageService messageServiceImpl() {
         return new MessageService() {
             public void printMessage() {
-                System.out.println("Message from MessageService interface implementation component");
+                System.out.println("Message from MessageService interface implementation component 1");
+            }
+        };
+    }
+
+    @Bean(name = "componentTwo")
+    MessageService messageServiceImpl2() {
+        return new MessageService() {
+            public void printMessage() {
+                System.out.println("Message from MessageService interface implementation component 2");
             }
         };
     }

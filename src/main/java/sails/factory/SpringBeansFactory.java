@@ -1,6 +1,6 @@
 package sails.factory;
 
-import org.springframework.context.*;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import sails.factory.config.ApplicationConfiguration;
 
@@ -25,11 +25,9 @@ public enum SpringBeansFactory {
         return this.applicationContext.getBean(beanID);
     }
 
-
     public <T> T getBean(Class<T> type) {
 
         return this.applicationContext.getBean(type);
     }
-
 
 }

@@ -1,6 +1,6 @@
 package sails.components;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import sails.components.service.MessageService;
 
@@ -21,7 +21,7 @@ public class JobHandler {
     }
 
     @Inject
-    public void setService(MessageService service) {
+    public void setService(@Qualifier("componentOne") MessageService service) {
         this.service = service;
     }
 }
